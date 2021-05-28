@@ -87,7 +87,21 @@ So sánh: + Đa thừa kế: Interface: một class có thể thực hiện nhi�
 	+ Mọi phương thức trong interface cần được thực hiện trong class
 	 Abstract không cần thiết (không cần phải override các method thường)
 
+_ Thuộc tính và phương thức tĩnh(static): Giả sử có 2 biến cùng một đối tượng thì các thao tác trên 2 biến đó sẽ không ảnh hưởng lẫn nhau (được xem như biến cục bộ). Trên thực tế ta muốn bất kỳ thao tác nào đều được lưu lại trên đối tượng đó thì kiểu dữ liệu tĩnh chính là mấu chốt
 
+_ Kiểu dữ liệu tĩnh: là loại dữ liệu được sử dụng ở dạng toàn cục, dù nó được xử lý bất kỳ file nào trong cùng chương trình đều được lưu lại trong lớp. Kiểu tĩnh này đều có các mức truy cập public, protected, private bình thường.
 
++ Các vấn đề thông dụng khi sử dụng kiểu tĩnh (static):
+ ++ Thuộc tính: public static $name
+ ++ Phương thức: public static function name()
++ Đối với thuộc tính tĩnh thì phải dùng (::) thêm dấu $ cho thuộc tính, ví dụ Class::$name
+Ngoài cách gọi trực tiếp tên class ta có thể dùng từ khóa self thay thế
++ Nếu sử dụng từ khóa $this sẽ bị báo sai vì thuộc tính và phương thức tĩnh ở dạng toàn cục, được gọi mà không cần khởi tạo.
++ Kế thừa khi sử dụng static: Chỉ dùng :: để truy xuất đến lớp cha (ví dụ parent::setName($name))
++ Lợi/ hại khi dùng static: ưu điểm là thay đổi dữ liệu toàn cục cho đối tượng đó, không cần khởi tạo đối tượng mới sử dụng được. Tuy nhiên khuyết điểm là chương trình sẽ xử lý lưu trữ toàn cục nên tốn bộ nhớ
+
+_ Xử lý database: Hàm connect, disconnect(mysql_close), insert dùng $sql = 'INSERT INTO'; rồi mysqli_query(connect, $sql), update tương tự insert 'update table set ...', remove tương tự insert 'delete from table where'.
+
+_ Tại sao sử dụng GET và SET trong php: private thuộc tính để bảo mật nhưng muốn sử dụng thì phải truy xuất qua function trung gian và đó là get/set
 
 
