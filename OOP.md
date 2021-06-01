@@ -66,7 +66,7 @@ Trường hợp cả 2 không có hàm khởi tạo thì sẽ không có hàm kh
 + Hàm hủy là hàm tự động gọi khi đối tượng bị hủy, nó thường được sử dụng để giải phóng bộ nhớ chương trình. Trong đối tượng hàm hủy có thể có hoặc không
 + Tương tự hàm khởi tạo ưu tiên hàm hủy lớp con, nếu không có sẽ chạy lớp cha, cón nếu cả 2 không có thì sẽ không chạy hàm hủy nào.
 
-_ Lớp trừu tượng abstract định nghĩa các hàm (phương thức) mà từ đó các lớp con sẽ kế thừa nó và Overwrite lại(tính đa hình). Tất cả phương thức của lớp abstract đều phải khai báo là abstract và phải ở mức protected và public, không được ở mức private. Lớp abstract có thể có thuộc tính nhưng không được khai báo là abstract, và không khởi tạo được đối tượng.
+_ Lớp trừu tượng abstract định nghĩa các hàm (phương thức) mà từ đó các lớp con sẽ kế thừa nó và Overwrite lại(tính đa hình). Tất cả phương thức của lớp abstract chỉ được định nghĩa, không được phép viết code xử lý và phải ở mức protected và public, không được ở mức private. Lớp abstract có thể có thuộc tính nhưng không được khai báo là abstract, và không khởi tạo được đối tượng.
 Cú pháp: abstract class Classname{}
 + Không được định nghĩa dòng lệnh nào trong hàm abstract, ngoại trừ __construct, hàm thường
 + Mức truy cập hàm phải ở public hoặc protected để lớp kế thừa có thể định nghĩa lại và các thuộc tính của lớp Abstract không được khai báo abstract
